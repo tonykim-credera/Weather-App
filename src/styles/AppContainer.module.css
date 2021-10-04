@@ -1,0 +1,30 @@
+.appContainer{
+    background: linear-gradient(45.38deg, #115DA3 0.65%, #4ECFED 100%);
+    height: 100vh;
+    margin: 0;
+    display:flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.location{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.date{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
+    margin: 0 0 21px 0;
+}

@@ -1,9 +1,11 @@
-import CardContainer from './components/CardContainer';
+import AppContainer from './components/AppContainer';
 
 function App() {
 
   return (
-    <CardContainer />
+    <div>
+      <AppContainer />
+    </div>
   );
 }
 
