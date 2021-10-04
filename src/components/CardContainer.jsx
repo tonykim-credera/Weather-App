@@ -39,11 +39,11 @@ function CardContainer(props){
 
     useEffect(() => {
         Axios.get(apiSource).then((response) => {
-            setTemperature1(response.data.forecast.forecastday[0].day.avgtemp_f);
-            setTemperature2(response.data.forecast.forecastday[1].day.avgtemp_f);
-            setTemperature3(response.data.forecast.forecastday[2].day.avgtemp_f);
-            setTemperature4(response.data.forecast.forecastday[0].day.avgtemp_f);
-            setTemperature5(response.data.forecast.forecastday[1].day.avgtemp_f);
+            setTemperature1(response.data.forecast.forecastday[0].day.avgtemp_c);
+            setTemperature2(response.data.forecast.forecastday[1].day.avgtemp_c);
+            setTemperature3(response.data.forecast.forecastday[2].day.avgtemp_c);
+            setTemperature4(response.data.forecast.forecastday[0].day.avgtemp_c);
+            setTemperature5(response.data.forecast.forecastday[1].day.avgtemp_c);
             setDay1(getDayOfWeek(0));
             setDay2(getDayOfWeek(1));
             setDay3(getDayOfWeek(2));
@@ -54,6 +54,26 @@ function CardContainer(props){
             setImg3(getImg(response.data.forecast.forecastday[2].day.condition.text));
             setImg4(getImg(response.data.forecast.forecastday[0].day.condition.text));
             setImg5(getImg(response.data.forecast.forecastday[1].day.condition.text));
+
+            var checkbox = document.querySelector('input[type="checkbox"]');
+
+            checkbox.addEventListener('change', function () {
+                if (checkbox.checked) {
+                    setTemperature1(response.data.forecast.forecastday[0].day.avgtemp_f);
+                    setTemperature2(response.data.forecast.forecastday[1].day.avgtemp_f);
+                    setTemperature3(response.data.forecast.forecastday[2].day.avgtemp_f);
+                    setTemperature4(response.data.forecast.forecastday[0].day.avgtemp_f);
+                    setTemperature5(response.data.forecast.forecastday[1].day.avgtemp_f);
+                console.log('Checked');
+                } else {
+                    setTemperature1(response.data.forecast.forecastday[0].day.avgtemp_c);
+                    setTemperature2(response.data.forecast.forecastday[1].day.avgtemp_c);
+                    setTemperature3(response.data.forecast.forecastday[2].day.avgtemp_c);
+                    setTemperature4(response.data.forecast.forecastday[0].day.avgtemp_c);
+                    setTemperature5(response.data.forecast.forecastday[1].day.avgtemp_c);
+                console.log('Not checked');
+                }
+            });
 
             console.log(response.data);
         })
@@ -92,7 +112,7 @@ function CardContainer(props){
         else if(imgText.includes("rain")){
             return (CloudDrizzleAlt);
         }
-        else if(imgText.includes("thunder") || imgText.includes("lighning")){
+        else if(imgText.includes("thunder") || imgText.includes("lighning") || imgText.includes("thundery")){
             return (CloudLightning);
         }
         else{

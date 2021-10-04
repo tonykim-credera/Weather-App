@@ -1,0 +1,43 @@
+.today{
+    height: 65px;
+    width: 217px;
+    display: flex;
+    align-items: center;
+    margin: 14px 0px 0px 28px;
+}
+
+.temperature{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    color: #65AED5;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.img{
+    width: 44.18px;
+    height: 39.27px;
+    margin: 0 0 0 6px;
+}
+
+.descriptionWrapper{
+    margin: 0;
+}
+
+.descriptionWrapper p{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #65AED5;
+    margin: 0 0 0 12px;
+    
+    overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+   -webkit-box-orient: vertical;
+}

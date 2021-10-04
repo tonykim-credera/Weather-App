@@ -2,9 +2,13 @@
 
 
 .card{
-    width: 134px;
+    width: 133.25px;
     height: 142px;
-    border: 1px solid #D8D8D8;
+    border-left: 1px solid #D8D8D8;
+}
+
+.card:first-child{
+    border-left: 0;
 }
 
 .title{

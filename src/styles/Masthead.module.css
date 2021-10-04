@@ -1,0 +1,42 @@
+.masthead{
+    background-image: url('../img/Dallas.png');
+    height: 368px;
+    width: 670px;
+    display: flex;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.203436);
+    border-radius: 3px 3px 0px 0px;
+    z-index: 2;
+    justify-content: space-between;
+}
+
+.temperature{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    color: #65AED5;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-left: 28px;
+    margin-top: 9px;
+}
+
+.img{
+    width: 44.18px;
+    height: 39.27px;
+    margin: 0;
+}
+
+.descriptionWrapper{
+    margin: 0;
+}
+
+.descriptionWrapper p{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #65AED5;
+    margin: 0;
+}
