@@ -44,11 +44,11 @@ function CardContainer(props){
             setTemperature3(response.data.forecast.forecastday[2].day.avgtemp_c);
             setTemperature4(response.data.forecast.forecastday[0].day.avgtemp_c);
             setTemperature5(response.data.forecast.forecastday[1].day.avgtemp_c);
-            setDay1(getDayOfWeek(0));
-            setDay2(getDayOfWeek(1));
-            setDay3(getDayOfWeek(2));
-            setDay4(getDayOfWeek(3));
-            setDay5(getDayOfWeek(4));
+            setDay1(getDayOfWeek(1));
+            setDay2(getDayOfWeek(2));
+            setDay3(getDayOfWeek(3));
+            setDay4(getDayOfWeek(4));
+            setDay5(getDayOfWeek(5));
             setImg1(getImg(response.data.forecast.forecastday[0].day.condition.text));
             setImg2(getImg(response.data.forecast.forecastday[1].day.condition.text));
             setImg3(getImg(response.data.forecast.forecastday[2].day.condition.text));
